@@ -1,0 +1,147 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("heart-bg.jpg");
+    background-size: cover;
+    font-family: "Pixelify Sans", sans-serif;
+    overflow: hidden;
+}
+
+/* Envelope Screen */
+#envelope-container {
+    text-align: center;
+    cursor: pointer;
+}
+
+#envelope-container p {
+    font-size: clamp(1.2rem, 5vw, 2rem);
+    color: #000;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+#envelope {
+    width: 180px;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+#letter-container {
+    display: none;
+    position: fixed;
+    inset: 0;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* The Window Frame */
+.letter-window {
+    width: 95vw;
+    max-width: 450px;
+    min-height: 400px; 
+    padding: 20px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    
+    background-image: url("window.png");
+    background-size: 100% 100%; 
+    background-repeat: no-repeat;
+    background-position: center;
+    
+    box-sizing: border-box;
+    position: relative;
+    transform: scale(0.8);
+    opacity: 0;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.letter-window.open {
+    transform: scale(1);
+    opacity: 1;
+}
+
+h1 {
+    font-size: clamp(1rem, 5vw, 1.4rem);
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 17%; 
+    width: 100%;
+    z-index: 10;
+}
+
+.cat {
+    width: 160px;
+    max-width: 45%;
+    height: auto;
+    margin-top: 118px; 
+    margin-bottom: 10px;
+}
+
+/* Button Layout */
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    width: 100%;
+}
+
+.btn {
+    width: 85px;
+    height: auto;
+    cursor: pointer;
+    user-select: none;
+}
+
+/* The Secret Pulse Button Style */
+.pixel-btn {
+    background-color: #ff4d4d;
+    color: white;
+    font-family: "Pixelify Sans", sans-serif;
+    
+    /* Reduced size settings */
+    font-size: 0.8rem; /* Smaller text */
+    padding: 8px 15px; /* Less space inside */
+    border: 2px solid #000; /* Slightly thinner border to match scale */
+    box-shadow: 3px 3px 0px #000; /* Smaller shadow */
+    
+    text-decoration: none;
+    margin: 10px auto; 
+    display: inline-block;
+    cursor: pointer;
+    animation: pixelPulse 1s infinite;
+}
+
+.pixel-btn:hover {
+    background-color: #ff1a1a;
+    transform: translate(2px, 2px);
+    box-shadow: 1px 1px 0px #000;
+}
+
+@keyframes pixelPulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.final-text {
+    font-size: 15px;
+    line-height: 1.3;
+    margin-bottom: 35px; 
+    padding: 0 20px;
+    margin-top: 5px; 
+    margin-left: 5px;
+    margin-right: 5px;
+}

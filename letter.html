@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet" />
+    <title>Be My Valentine | A Letter for Mariyam</title>
+    <style>
+      /* Specific overrides for the paragraph page */
+      .letter-paragraph {
+          /* 1. Made font much bigger and bold */
+          font-size: clamp(1.5rem, 6vw, 2.2rem); 
+          font-weight: bold; 
+          line-height: 1.2;
+          
+          padding: 0 20px; 
+          
+          /* 2. Position the container below the header */
+          margin-top: 115px; 
+          
+          /* 3. CENTER LOGIC: Fixed height and flexbox */
+          height: 180px; /* Defines the space available in the checkered box */
+          display: flex;
+          flex-direction: column;
+          justify-content: center; /* Centers vertical */
+          align-items: center;     /* Centers horizontal */
+          
+          color: #333;
+          width: 100%;
+          box-sizing: border-box;
+          
+          /* Removes scrollbar since text is short */
+          overflow: hidden; 
+      }
+
+      .letter-window {
+          opacity: 1;
+          transform: scale(1);
+          display: flex !important;
+          padding: 25px; 
+          
+          justify-content: flex-start;
+          align-items: center;
+          
+          background-image: url("window.png"); 
+          background-size: 100% 100%; 
+          background-repeat: no-repeat;
+      }
+      
+      /* Reset margin on the p tag to ensure perfect centering */
+      .letter-paragraph p {
+          margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="letter-container" style="display: flex;">
+      <div class="letter-window">
+        <h1 id="letter-title"><i>My dearest, Mariyam</i></h1>
+        
+        <div class="letter-paragraph">
+          <p>
+              COME BACK ON THE 14TH 😉
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </body>
+</html>
